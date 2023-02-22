@@ -5,6 +5,7 @@ import CompanyInventory from '../../Components/ListData';
 import DataCompany from '../../Components/DataCompany';
 
 import './styles.scss';
+import PrintPdfById from '../../Components/PrintPdf';
 
 const RegisterCompany = () => {
   const [select, setSelect] = useState('');
@@ -42,6 +43,12 @@ const RegisterCompany = () => {
             >
               Company Inventory
             </button>
+            <button
+              className='register-select-buttons_btn'
+              onClick={() => setSelect('pdf')}
+            >
+              Print Inventory
+            </button>
           </div>
         </section>
       ) : null}
@@ -49,6 +56,7 @@ const RegisterCompany = () => {
       {select === 'created' ? <Inventory newSelect={newSelection} /> : null}
       {select === 'data' ? <DataCompany newSelect={newSelection} /> : null}
       {select === 'inventory' ? <CompanyInventory newSelect={newSelection} /> : null}
+      {select === 'pdf' ? <PrintPdfById newSelect={newSelection} /> : null}
     </main>
   );
 };
