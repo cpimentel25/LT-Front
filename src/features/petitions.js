@@ -1,5 +1,5 @@
-// const API = process.env.REACT_APP_BACKEND;
-const API = 'http://localhost:8000';
+const API = process.env.REACT_APP_BACKEND;
+// const API = 'http://localhost:8000';
 
 export async function loginUser(user) {
   const payload = {
