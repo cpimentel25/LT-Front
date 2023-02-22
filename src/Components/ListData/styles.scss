@@ -1,0 +1,61 @@
+@import '../../scss/global';
+
+
+.companyinventory {
+  width: 320px;
+  height: 580px;
+  background-color: $brown;
+  border: none;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-section {
+    &-title {
+      margin: 10px 0;
+    }
+    &-select{
+      width: 250px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px 0;
+      padding-left: 10px;
+      background-color: $grey-dark;
+      color: $bone-white;
+      font-size: 16px;
+    }
+
+    &-list {
+      width: 250px;
+      height: 350px;
+      margin: 20px 0;
+      background-color: $dark;
+      border: none;
+      border-radius: 7px;
+
+      &_data {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        padding: 10px 0;
+
+        &_inv {
+          width: 210px;
+          height: 30px;
+          border: none;
+          border-radius: 5px;
+          background-color: $grey-dark;
+          padding: 0 10px;
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

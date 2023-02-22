@@ -1,0 +1,58 @@
+@import '../../../scss/global';
+
+
+.loginform {
+  width: 300px;
+  height: 400px;
+  background-color: $brown;
+  border: none;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-form {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $bone-white;
+
+    &_title {
+      margin: 20px 0;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &_input {
+      border: none;
+      border-radius: 5px;
+      height: 60px;
+      margin: 10px 0;
+      padding-left: 10px;
+      background-color: $grey-dark;
+      color: $bone-white;
+      font-size: 16px;
+    }
+
+    &_btnsubmit {
+      width: 150px;
+      height: 40px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      background-color: $orange;
+      color: $bone-white;
+      font-size: 17px;
+      box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+      cursor: pointer;
+    }
+
+    &_btnsubmit:hover {
+      background-color: $orange-hover;
+    }
+  }
+}

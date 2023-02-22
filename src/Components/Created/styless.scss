@@ -1,0 +1,58 @@
+@import '../../scss/global';
+
+.inventoryForm {
+  width: 320px;
+  height: 580px;
+  background-color: $brown;
+  border: none;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-form {
+    &_selectOpt{
+      margin-top: 50px;
+    }
+
+    &-select {
+      width: 270px;
+      border: none;
+      border-radius: 5px;
+      height: 60px;
+      margin: 5px 0;
+      padding-left: 10px;
+      background-color: $grey-dark;
+      color: $bone-white;
+      font-size: 16px;
+    }
+
+    &_title {
+      margin: 20px 0;
+      font-size: 20px;
+      text-transform: uppercase;
+    }
+
+    &-dataForm {
+      display: flex;
+      flex-direction: column;
+      height: 100px;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    &_inputinv {
+      width: 270px;
+      border: none;
+      border-radius: 5px;
+      height: 60px;
+      margin: 5px 0;
+      padding-left: 10px;
+      background-color: $grey-dark;
+      color: $bone-white;
+      font-size: 16px;
+    }
+  }
+}

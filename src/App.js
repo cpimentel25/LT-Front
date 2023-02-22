@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import AuthPage from './Pages/Login';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import RegisterCompany from './Pages/Home';
+import { useEffect } from 'react';
+
+import './App.scss';
 
 function App() {
+  const token = localStorage.getItem('token');
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!token) {
+      return console.log('need login first')
+    }
+    return navigate('/home');
+  }, [navigate, token])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='App'>
+      {!token ? (
+        <Routes>
+          <Route path='/' element={<AuthPage />} />
+        </Routes>
+      ) : (
+        <Routes>
+          <Route path='/home' element={<RegisterCompany />} />
+        </Routes>
+      )}
+    </main>
   );
 }
 
